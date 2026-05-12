@@ -322,3 +322,92 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
 }
+
+@media (max-width: 1023px) {
+    /* Inicio (Hero) */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 5%;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 3.5rem; /* Letra un poco más pequeña */
+    }
+    .hero-content p {
+        max-width: 100%;
+        margin: 0 auto 30px auto;
+    }
+    .hero-buttons, .social-links {
+        justify-content: center; /* Centramos los botones */
+    }
+    .hero-image {
+        justify-content: center;
+    }
+
+    /* Sobre Mi */
+    .container-split {
+        grid-template-columns: 1fr; /* Pasa de 2 columnas a 1 columna */
+        text-align: center;
+    }
+
+    /* Proyectos */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Pasa de 3 columnas a 2 columnas */
+    }
+
+    /* Contacto */
+    .contact-grid {
+        flex-wrap: wrap; /* Permite que las tarjetas bajen si no caben */
+    }
+}
+
+/* --- MÓVIL (hasta 767px) --- */
+/* Navegación en columna, tarjetas apiladas, textos más pequeños [cite: 95] */
+@media (max-width: 767px) {
+    /* Navegación */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Inicio (Hero) */
+    .hero-content h1 {
+        font-size: 2.5rem; /* Letra adaptada a celulares */
+    }
+    .hero-buttons {
+        flex-direction: column; /* Botones uno encima del otro */
+        gap: 10px;
+    }
+    .hero-image img {
+        max-width: 100%; /* La imagen no se sale de la pantalla */
+        height: auto;
+    }
+
+    /* Textos generales */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Proyectos */
+    .projects-grid {
+        grid-template-columns: 1fr; /* En móvil, las tarjetas ocupan todo el ancho (1 sola columna) [cite: 90, 91] */
+    }
+
+    /* Contacto */
+    .contact-card {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}
